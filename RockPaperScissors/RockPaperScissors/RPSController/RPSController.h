@@ -1,5 +1,5 @@
 //
-//  RPSGame.h
+//  RPSController.h
 //  RockPaperScissors
 //
 //  Created by Cesare de Cal on 3/2/19.
@@ -11,13 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RPSGame : NSObject
+@interface RPSController : NSObject
 
-@property (nonatomic) RPSTurn *playerTurn;
-@property (nonatomic) RPSTurn *computerTurn;
-
-- (instancetype)initWithFirstTurn:(RPSTurn *)playerTurn
-                       secondTurn:(RPSTurn *)computerTurn;
+- (void)throwDown:(Move) move;
 
 @end
 

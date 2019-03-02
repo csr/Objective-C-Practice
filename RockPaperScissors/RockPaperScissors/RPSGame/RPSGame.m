@@ -10,12 +10,13 @@
 
 @implementation RPSGame
 
-- (instancetype)initWithFirstTurn:(RPSTurn *)firstTurn withSecondTurn:(RPSTurn *)secondTurn {
+- (instancetype)initWithFirstTurn:(RPSTurn *)playerTurn
+                       secondTurn:(RPSTurn *)computerTurn {
     self = [self init];
     
     if (self) {
-        _firstTurn = firstTurn;
-        _secondTurn = secondTurn;
+        _playerTurn = playerTurn;
+        _computerTurn = computerTurn;
     }
     
     return self;

@@ -10,7 +10,7 @@
 
 @implementation RPSTurn
 
-- (instancetype)initWithMove:(Move *)move {
+- (instancetype)initWithMove:(Move) move {
     self = [self init];
     
     if (self) {
@@ -18,6 +18,14 @@
     }
     
     return self;
+}
+
+- (Move)generateMove {
+    return Rock;
+}
+
+- (BOOL)defeats:(RPSTurn *) opponent {
+    return false;
 }
 
 @end

@@ -10,6 +10,7 @@
 		1DBACD54222ACD8900544393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBACD53222ACD8900544393 /* main.m */; };
 		1DBACD60222ACDA500544393 /* RPSGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBACD5F222ACDA500544393 /* RPSGame.m */; };
 		1DBACD64222ACDBA00544393 /* RPSTurn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBACD63222ACDBA00544393 /* RPSTurn.m */; };
+		1DBACD68222B021400544393 /* RPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBACD67222B021400544393 /* RPSController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		1DBACD5F222ACDA500544393 /* RPSGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSGame.m; sourceTree = "<group>"; };
 		1DBACD62222ACDBA00544393 /* RPSTurn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSTurn.h; sourceTree = "<group>"; };
 		1DBACD63222ACDBA00544393 /* RPSTurn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSTurn.m; sourceTree = "<group>"; };
+		1DBACD66222B021400544393 /* RPSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSController.h; sourceTree = "<group>"; };
+		1DBACD67222B021400544393 /* RPSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				1DBACD53222ACD8900544393 /* main.m */,
 				1DBACD61222ACDAA00544393 /* RPSGame */,
 				1DBACD65222ACDCA00544393 /* RPSTurn */,
+				1DBACD69222B021700544393 /* RPSController */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -86,6 +90,15 @@
 				1DBACD63222ACDBA00544393 /* RPSTurn.m */,
 			);
 			path = RPSTurn;
+			sourceTree = "<group>";
+		};
+		1DBACD69222B021700544393 /* RPSController */ = {
+			isa = PBXGroup;
+			children = (
+				1DBACD66222B021400544393 /* RPSController.h */,
+				1DBACD67222B021400544393 /* RPSController.m */,
+			);
+			path = RPSController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +160,7 @@
 				1DBACD54222ACD8900544393 /* main.m in Sources */,
 				1DBACD60222ACDA500544393 /* RPSGame.m in Sources */,
 				1DBACD64222ACDBA00544393 /* RPSTurn.m in Sources */,
+				1DBACD68222B021400544393 /* RPSController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

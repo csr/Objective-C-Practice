@@ -18,9 +18,13 @@ typedef NS_ENUM(NSInteger, Move) {
     Scissors
 };
 
-@property (nonatomic) Move *move;
+@property (nonatomic) Move move;
 
-- (instancetype)initWithMove:(Move *)move;
+- (instancetype)initWithMove:(Move) move;
+
+- (Move)generateMove;
+
+- (BOOL)defeats:(RPSTurn*) opponent;
 
 @end
 
