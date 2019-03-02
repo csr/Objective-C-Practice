@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, Move) {
 
 @property (nonatomic) Move *move;
 
--(instancetype)initWithMove:(Move*)move;
+- (instancetype)initWithMove:(Move *)move;
 
 @end
 
