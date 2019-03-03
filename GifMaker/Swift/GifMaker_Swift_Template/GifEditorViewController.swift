@@ -10,7 +10,19 @@ import UIKit
 
 class GifEditorViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var gifImageView: UIImageView!
+    
+    var gifURL: URL?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        gifImageView.backgroundColor = .yellow
+        
+        if let gifURL = gifURL {
+            print("the gif URL is \(gifURL)")
+            let gifFromRecording = UIImage.gif(url: gifURL.absoluteString)
+            gifImageView.image = gifFromRecording
+        }
     }
 }

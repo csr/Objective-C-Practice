@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DM2-vZ-vXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1885.5" y="-783.75"/>
+            <point key="canvasLocation" x="-1854" y="-784"/>
         </scene>
         <!--My Collection-->
         <scene sceneID="ALv-Et-lNO">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mO-R1-5Re" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="66"/>
+            <point key="canvasLocation" x="-170" y="-39"/>
         </scene>
         <!--Add a Caption-->
         <scene sceneID="7IM-YL-IPR">
@@ -207,10 +207,13 @@
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="gifImageView" destination="Idg-S9-dYE" id="kcd-Mr-8MO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSQ-pK-rKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="-783.75"/>
+            <point key="canvasLocation" x="-170" y="-785"/>
         </scene>
         <!--Gif Preview View Controller-->
         <scene sceneID="6jO-Zd-0F6">
@@ -326,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEl-4x-y0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="66"/>
+            <point key="canvasLocation" x="748" y="12"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="MO7-ys-2QJ">

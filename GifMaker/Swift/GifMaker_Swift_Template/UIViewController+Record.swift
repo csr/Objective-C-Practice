@@ -9,6 +9,11 @@
 import UIKit
 import MobileCoreServices
 
+// Regift constants
+let frameCount = 16
+let delayTime: Float = 0.2
+let loopCount = 0 // 0 means loop forever
+
 // MARK: - UIViewController: UIImagePickerControllerDelegate
 
 extension UIViewController: UIImagePickerControllerDelegate {
@@ -28,8 +33,8 @@ extension UIViewController: UIImagePickerControllerDelegate {
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let mediaType = info[UIImagePickerControllerMediaType] as? String, mediaType == kUTTypeMovie as String, let videoURL = info[UIImagePickerControllerMediaURL] as? NSURL, let path = videoURL.path {
-            UISaveVideoAtPathToSavedPhotosAlbum(path, nil, nil, nil)
+        if let mediaType = info[UIImagePickerControllerMediaType] as? String, mediaType == kUTTypeMovie as String, let videoURL = info[UIImagePickerControllerMediaURL] as? URL {
+            convertVideoToGIF(videoURL: videoURL)
             picker.dismiss(animated: true, completion: nil)
         }
     }
@@ -37,10 +42,22 @@ extension UIViewController: UIImagePickerControllerDelegate {
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    // GIF conversion methods
+    func convertVideoToGIF(videoURL: URL) {
+        let regift = Regift(sourceFileURL: videoURL, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
+        if let gifURL = regift.createGif() {
+            displayGIF(url: gifURL)
+        }
+    }
+    
+    func displayGIF(url: URL) {
+        guard let gifEditorVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as? GifEditorViewController else { return }
+        gifEditorVC.gifURL = url
+        navigationController?.pushViewController(gifEditorVC, animated: true)
+    }
 }
 
 // MARK: - UIViewController: UINavigationControllerDelegate
 
-extension UIViewController: UINavigationControllerDelegate {
-    
-}
+extension UIViewController: UINavigationControllerDelegate {}
