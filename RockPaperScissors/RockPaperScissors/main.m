@@ -11,7 +11,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        RPSController *myController = [[RPSController alloc] init];
+        RPSController *gameController = [[RPSController alloc] init];
+        [gameController throwDown: Paper];
+        NSString *resultsMessage = [gameController messageForGame:gameController.game];
+        NSLog(@"%@", resultsMessage);
     }
     return 0;
 }

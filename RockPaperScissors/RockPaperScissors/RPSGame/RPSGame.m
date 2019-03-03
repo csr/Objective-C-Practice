@@ -30,8 +30,4 @@
     return [self.firstTurn defeats:self.secondTurn] ? self.secondTurn : self.firstTurn;
 }
 
-- (NSString *)resultsString:(RPSGame *)game {
-    return [game.firstTurn defeats:game.secondTurn] ? @"You win!" : @"You lose!";    
-}
-
 @end

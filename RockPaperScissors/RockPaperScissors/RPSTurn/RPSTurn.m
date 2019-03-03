@@ -21,7 +21,7 @@
 }
 
 - (instancetype)init {
-    self = [self init];
+//    self = [self init];
     
     if (self) {
         _move = [self generateMove];

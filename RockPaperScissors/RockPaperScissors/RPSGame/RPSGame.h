@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (RPSTurn *)winner;
 - (RPSTurn *)loser;
 
--(NSString *)resultsString:(RPSGame *)game;
 
 @end
 
