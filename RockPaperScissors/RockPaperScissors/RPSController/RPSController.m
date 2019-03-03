@@ -12,8 +12,14 @@
 @implementation RPSController
 
 // The player chooses a move that gets passed to this method
-- (void)throwDown:(Move) move {
-    RPSTurn *playersTurn = [[RPSTurn alloc] initWithMove:move];
+- (void)throwDown:(Move) playersMove {
+    // Here the RPSTurn class generates the opponent's move
+    RPSTurn *playersTurn = [[RPSTurn alloc] initWithMove: playersMove];
+    RPSTurn *computersTurn = [[RPSTurn alloc] init];
+     
+    // The RPSGame class stores the results of a game
+    self.game = [[RPSGame alloc] initWithFirstTurn:playersTurn
+                                        secondTurn:computersTurn];
 }
 
 @end

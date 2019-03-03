@@ -10,20 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RPSTurn : NSObject
-
 typedef NS_ENUM(NSInteger, Move) {
     Rock,
     Paper,
-    Scissors
+    Scissors,
+    Invalid
 };
+
+@interface RPSTurn : NSObject
 
 @property (nonatomic) Move move;
 
 - (instancetype)initWithMove:(Move) move;
-
-- (Move)generateMove;
-
+- (NSString *)description;
 - (BOOL)defeats:(RPSTurn*) opponent;
 
 @end

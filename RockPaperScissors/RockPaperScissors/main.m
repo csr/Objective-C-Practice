@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RPSController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+//        RPSController *myController = [[RPSController alloc] init];
     }
     return 0;
 }

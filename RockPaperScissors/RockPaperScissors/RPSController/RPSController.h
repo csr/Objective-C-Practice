@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "RPSTurn.h"
+#import "RPSGame.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RPSController : NSObject
 
-- (void)throwDown:(Move) move;
+@property (nonatomic) RPSGame *game;
+
+- (void)throwDown:(Move) playersMove;
 
 @end
 

@@ -15,11 +15,23 @@
     self = [self init];
     
     if (self) {
-        _playerTurn = playerTurn;
-        _computerTurn = computerTurn;
+        _firstTurn = playerTurn;
+        _secondTurn = computerTurn;
     }
     
     return self;
+}
+
+- (RPSTurn *)winner {
+    return [self.firstTurn defeats:self.secondTurn] ? self.firstTurn : self.secondTurn;
+}
+
+- (RPSTurn *)loser {
+    return [self.firstTurn defeats:self.secondTurn] ? self.secondTurn : self.firstTurn;
+}
+
+- (NSString *)resultsString:(RPSGame *)game {
+    return [game.firstTurn defeats:game.secondTurn] ? @"You win!" : @"You lose!";    
 }
 
 @end
