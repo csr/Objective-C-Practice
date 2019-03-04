@@ -12,6 +12,7 @@
 		1DAC13D4222BEB3400B09EEC /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D3222BEB3400B09EEC /* PreviewViewController.swift */; };
 		1DAC13D6222BED6D00B09EEC /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D5222BED6D00B09EEC /* UIViewController+Record.swift */; };
 		1DAC13D9222C48D000B09EEC /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D8222C48D000B09EEC /* UIImage+Gif.swift */; };
+		1DAC13DB222C50B500B09EEC /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13DA222C50B500B09EEC /* Gif.swift */; };
 		A93B3B081D2D3F7900BE1662 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B041D2D3F7900BE1662 /* LaunchScreen.xib */; };
 		A93B3B091D2D3F7900BE1662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B061D2D3F7900BE1662 /* Main.storyboard */; };
 		EDDFC4DC1CE261A600A586CA /* tinaFeyHiFive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */; };
@@ -29,6 +30,7 @@
 		1DAC13D3222BEB3400B09EEC /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		1DAC13D5222BED6D00B09EEC /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
 		1DAC13D8222C48D000B09EEC /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		1DAC13DA222C50B500B09EEC /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		A93B3B051D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A93B3B071D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tinaFeyHiFive.gif; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 				1DAC13D5222BED6D00B09EEC /* UIViewController+Record.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		1DAC13DC222C50B900B09EEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DAC13DA222C50B500B09EEC /* Gif.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A94CC3D61D21C84C00DC758E /* Supporting Files */ = {
@@ -112,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */,
+				1DAC13DC222C50B900B09EEC /* Model */,
 				1DAC13D0222BEB0A00B09EEC /* View Controllers */,
 				1DAC13D7222BED7000B09EEC /* Extensions */,
 				A94CC3D71D21C85A00DC758E /* Assets */,
@@ -210,6 +221,7 @@
 				1DAC13CF222BEB0500B09EEC /* WelcomeViewController.swift in Sources */,
 				1DAC13D4222BEB3400B09EEC /* PreviewViewController.swift in Sources */,
 				1DAC13D9222C48D000B09EEC /* UIImage+Gif.swift in Sources */,
+				1DAC13DB222C50B500B09EEC /* Gif.swift in Sources */,
 				1DAC13D2222BEB2000B09EEC /* GifEditorViewController.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
