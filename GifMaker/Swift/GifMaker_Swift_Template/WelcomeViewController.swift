@@ -11,11 +11,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var gifImageView: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

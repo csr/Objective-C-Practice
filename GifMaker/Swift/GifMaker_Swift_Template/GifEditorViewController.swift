@@ -17,6 +17,7 @@ class GifEditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Add a Caption"
         captionTextField.delegate = self
     }
     
@@ -35,6 +36,19 @@ class GifEditorViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+    
+    @IBAction func presentPreview(sender: AnyObject) {
+        guard let videoURL = self.gif?.videoURL, let previewVC = self.storyboard?.instantiateViewController(withIdentifier: "GifPreviewViewController") as? GifPreviewViewController, let captionText = captionTextField.text else { return }
+        self.gif?.caption = self.captionTextField.text
+        
+        let regift = Regift(sourceFileURL: videoURL, destinationFileURL: nil, frameCount: frameCount, delayTime: delayTime, loopCount: loopCount)
+        let captionFont = self.captionTextField.font
+        if let gifURL = regift.createGif(self.captionTextField.text, font: captionFont) {
+            let newGif = Gif(url: gifURL, videoURL: videoURL, caption: captionText)
+            previewVC.gif = newGif
+            self.navigationController?.pushViewController(previewVC, animated: true)
+        }
     }
     
     func subscribeToKeyboardNotifications() {

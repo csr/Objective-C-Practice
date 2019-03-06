@@ -16,14 +16,14 @@ class Gif {
     var gifData: NSData?
     
     init(url: URL, videoURL: URL, caption: String) {
-        self.url = videoURL
+        self.url = url
         self.videoURL = videoURL
         self.caption = caption
         self.gifImage = UIImage.gif(url: url.absoluteString)
-        self.gifData = nil
     }
-    
+        
     init(name: String) {
         self.gifImage = UIImage.gif(name: name)
     }
 }
+

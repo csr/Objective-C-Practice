@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DAC13CF222BEB0500B09EEC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */; };
 		1DAC13D2222BEB2000B09EEC /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */; };
-		1DAC13D4222BEB3400B09EEC /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D3222BEB3400B09EEC /* PreviewViewController.swift */; };
+		1DAC13D4222BEB3400B09EEC /* GifPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */; };
 		1DAC13D6222BED6D00B09EEC /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D5222BED6D00B09EEC /* UIViewController+Record.swift */; };
 		1DAC13D9222C48D000B09EEC /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D8222C48D000B09EEC /* UIImage+Gif.swift */; };
 		1DAC13DB222C50B500B09EEC /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13DA222C50B500B09EEC /* Gif.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
-		1DAC13D3222BEB3400B09EEC /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPreviewViewController.swift; sourceTree = "<group>"; };
 		1DAC13D5222BED6D00B09EEC /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
 		1DAC13D8222C48D000B09EEC /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		1DAC13DA222C50B500B09EEC /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */,
 				1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */,
-				1DAC13D3222BEB3400B09EEC /* PreviewViewController.swift */,
+				1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			files = (
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,
 				1DAC13CF222BEB0500B09EEC /* WelcomeViewController.swift in Sources */,
-				1DAC13D4222BEB3400B09EEC /* PreviewViewController.swift in Sources */,
+				1DAC13D4222BEB3400B09EEC /* GifPreviewViewController.swift in Sources */,
 				1DAC13D9222C48D000B09EEC /* UIImage+Gif.swift in Sources */,
 				1DAC13DB222C50B500B09EEC /* Gif.swift in Sources */,
 				1DAC13D2222BEB2000B09EEC /* GifEditorViewController.swift in Sources */,

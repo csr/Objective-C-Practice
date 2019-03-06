@@ -205,6 +205,9 @@
                     <navigationItem key="navigationItem" title="Title" id="98w-hN-q9u">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kvy-5V-EgW">
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="presentPreviewWithSender:" destination="gN0-HT-VRx" id="287-9L-qcU"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -219,7 +222,7 @@
         <!--Gif Preview View Controller-->
         <scene sceneID="6jO-Zd-0F6">
             <objects>
-                <viewController storyboardIdentifier="PreviewViewController" title="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cB7-Y1-ZFX" userLabel="Gif Preview View Controller" customClass="PreviewViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GifPreviewViewController" title="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cB7-Y1-ZFX" userLabel="Gif Preview View Controller" customClass="GifPreviewViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rxa-Xz-1J1"/>
                         <viewControllerLayoutGuide type="bottom" id="zEa-bK-uMp"/>
@@ -245,6 +248,9 @@
                                         <state key="normal" title="SHARE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareGifWithSender:" destination="cB7-Y1-ZFX" eventType="touchUpInside" id="wo6-y4-gTk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoi-MZ-GNH">
                                         <rect key="frame" x="0.0" y="66" width="343" height="50"/>
@@ -271,6 +277,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="SWX-N6-oaS"/>
+                    <connections>
+                        <outlet property="gifImageView" destination="HQu-c2-zTO" id="erX-7Y-MED"/>
+                        <outlet property="saveButton" destination="xoi-MZ-GNH" id="cqw-J7-jID"/>
+                        <outlet property="shareButton" destination="lnU-9g-0xe" id="CTO-H9-c2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCC-tI-bRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
