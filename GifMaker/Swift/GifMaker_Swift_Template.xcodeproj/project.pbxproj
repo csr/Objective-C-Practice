@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3E220B223E50DC00EDEA39 /* SavedGifsVewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E220A223E50DC00EDEA39 /* SavedGifsVewController.swift */; };
+		1D3E220E223E53F400EDEA39 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E220D223E53F400EDEA39 /* GifCell.swift */; };
 		1DAC13CF222BEB0500B09EEC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */; };
 		1DAC13D2222BEB2000B09EEC /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */; };
 		1DAC13D4222BEB3400B09EEC /* GifPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3E220A223E50DC00EDEA39 /* SavedGifsVewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGifsVewController.swift; sourceTree = "<group>"; };
+		1D3E220D223E53F400EDEA39 /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
 		1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPreviewViewController.swift; sourceTree = "<group>"; };
@@ -55,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3E220C223E53DD00EDEA39 /* SavedGifsVewController */ = {
+			isa = PBXGroup;
+			children = (
+				1D3E220A223E50DC00EDEA39 /* SavedGifsVewController.swift */,
+				1D3E220D223E53F400EDEA39 /* GifCell.swift */,
+			);
+			name = SavedGifsVewController;
+			sourceTree = "<group>";
+		};
 		1DAC13D0222BEB0A00B09EEC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1DAC13CE222BEB0500B09EEC /* WelcomeViewController.swift */,
 				1DAC13D1222BEB2000B09EEC /* GifEditorViewController.swift */,
 				1DAC13D3222BEB3400B09EEC /* GifPreviewViewController.swift */,
+				1D3E220C223E53DD00EDEA39 /* SavedGifsVewController */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -219,6 +233,8 @@
 			files = (
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,
 				1DAC13CF222BEB0500B09EEC /* WelcomeViewController.swift in Sources */,
+				1D3E220E223E53F400EDEA39 /* GifCell.swift in Sources */,
+				1D3E220B223E50DC00EDEA39 /* SavedGifsVewController.swift in Sources */,
 				1DAC13D4222BEB3400B09EEC /* GifPreviewViewController.swift in Sources */,
 				1DAC13D9222C48D000B09EEC /* UIImage+Gif.swift in Sources */,
 				1DAC13DB222C50B500B09EEC /* Gif.swift in Sources */,

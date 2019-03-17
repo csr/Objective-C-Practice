@@ -19,17 +19,17 @@
                         <color key="tintColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="aXC-Xw-CZL" kind="relationship" relationship="rootViewController" id="O6U-Pr-xGP"/>
+                        <segue destination="upq-jB-3dI" kind="relationship" relationship="rootViewController" id="WC6-gq-jdm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DM2-vZ-vXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1854" y="-784"/>
+            <point key="canvasLocation" x="-2462" y="-784"/>
         </scene>
         <!--My Collection-->
         <scene sceneID="ALv-Et-lNO">
             <objects>
-                <viewController storyboardIdentifier="SavedGifsViewController" title="My Collection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="upq-jB-3dI" customClass="SavedGifsViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavedGifsViewController" title="My Collection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="upq-jB-3dI" customClass="SavedGifsVewController" customModule="GifMaker_Swift_Template" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E4A-ch-Oxv"/>
                         <viewControllerLayoutGuide type="bottom" id="zVw-uv-suS"/>
@@ -48,7 +48,7 @@
                                     <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="2ru-Ed-G6h" customClass="GifCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="2ru-Ed-G6h" customClass="GifCell" customModule="GifMaker_Swift_Template" customModuleProvider="target">
                                         <rect key="frame" x="99" y="8" width="177" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -82,7 +82,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <outlet property="gifImageView" destination="sHD-OW-keS" id="VAe-LJ-h3J"/>
+                                            <outlet property="gifImageView" destination="sHD-OW-keS" id="DDb-AA-ttN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -98,6 +98,9 @@
                                     <constraint firstAttribute="height" constant="60" id="nD5-xT-Xdf"/>
                                 </constraints>
                                 <state key="normal" image="createButton"/>
+                                <connections>
+                                    <action selector="presentVideoOptionsWithSender:" destination="upq-jB-3dI" eventType="touchUpInside" id="joN-1o-dp6"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rBY-mr-O59">
                                 <rect key="frame" x="16" y="261.5" width="343" height="144"/>
@@ -158,10 +161,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Collection" id="7HF-Yq-Lti"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hbv-Kk-KXX" id="PJJ-7N-UTv"/>
+                        <outlet property="emptyView" destination="rBY-mr-O59" id="8kF-ro-pyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mO-R1-5Re" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="-39"/>
+            <point key="canvasLocation" x="-1730" y="-784"/>
         </scene>
         <!--Add a Caption-->
         <scene sceneID="7IM-YL-IPR">
@@ -356,13 +363,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-5B-Ruk">
-                                <rect key="frame" x="16" y="64" width="343" height="343"/>
+                                <rect key="frame" x="16" y="20" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wun-5B-Ruk" secondAttribute="height" multiplier="1:1" id="Tia-mF-cfY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxW-AR-iPS">
-                                <rect key="frame" x="16" y="351" width="343" height="44"/>
+                                <rect key="frame" x="16" y="307" width="343" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ydg-GB-ycP"/>
                                 </constraints>
@@ -384,7 +391,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-6r-tbq">
-                                <rect key="frame" x="16" y="407" width="343" height="180"/>
+                                <rect key="frame" x="16" y="363" width="343" height="224"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UIK-Hq-gR7">
                                         <rect key="frame" x="12" y="21" width="319" height="75"/>
