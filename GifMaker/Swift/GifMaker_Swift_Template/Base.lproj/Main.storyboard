@@ -380,7 +380,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="createButton"/>
                                 <connections>
-                                    <action selector="launchVideoCameraWithSender:" destination="aXC-Xw-CZL" eventType="touchUpInside" id="noj-mf-Y5w"/>
+                                    <action selector="presentVideoOptionsWithSender:" destination="aXC-Xw-CZL" eventType="touchUpInside" id="sWn-PB-MSh"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-6r-tbq">

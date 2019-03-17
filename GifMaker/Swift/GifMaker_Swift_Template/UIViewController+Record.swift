@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import AVFoundation
 
 // Regift constants
 let frameCount = 16
@@ -18,7 +19,31 @@ let loopCount = 0 // 0 means loop forever
 
 extension UIViewController: UIImagePickerControllerDelegate {
     
-    @IBAction func launchVideoCamera(sender: AnyObject) {
+    @IBAction func presentVideoOptions(sender: AnyObject) {
+        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+            launchPhotoLibrary()
+        } else {
+            let newGifActionSheet = UIAlertController(title: "Create a new GIF", message: nil, preferredStyle: .actionSheet)
+            let recordVideoAction = UIAlertAction(title: "Record a Video", style: .default) { (action) in
+                self.launchVideoCamera()
+            }
+            let chooseFromExistingAction = UIAlertAction(title: "Choose from Existing", style: .default) { (action) in
+                self.launchPhotoLibrary()
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            newGifActionSheet.addAction(recordVideoAction)
+            newGifActionSheet.addAction(chooseFromExistingAction)
+            newGifActionSheet.addAction(cancelAction)
+            
+            present(newGifActionSheet, animated: true, completion: nil)
+            let pinkColor = #colorLiteral(red: 1, green: 0.2549019608, blue: 0.4392156863, alpha: 1)
+            newGifActionSheet.view.tintColor = pinkColor
+        }
+    }
+    
+    func launchVideoCamera() {
         let recordViewController = pickerController(sourceType: .camera)
         present(recordViewController, animated: true, completion: nil)
     }
@@ -57,7 +82,12 @@ extension UIViewController: UIImagePickerControllerDelegate {
         gifEditorVC.gif = gif
         navigationController?.pushViewController(gifEditorVC, animated: true)
     }
+    
+    func launchPhotoLibrary() {
+        self.present(pickerController(sourceType: .photoLibrary), animated: true, completion: nil)
+    }
 }
+    
 
 // MARK: - UIViewController: UINavigationControllerDelegate
 
